@@ -1,0 +1,43 @@
+/* // 追加 */
+
+ul#NodeMenu {
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    list-style: none;
+}
+
+ul#NodeMenu li {
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*ul#NodeMenu a {
+        text-decoration:none;
+        color:navy;
+        display:block;
+        padding:2px 0;
+    }*/
+
+
+/* ul#NodeMenu a:hover {
+     //        color:orange; 
+} */
+
+ul#NodeMenu span.parent {
+    /* 親テキスト */
+    /* color:navy; */
+    font-weight: bold;
+    background-color: #eeeeee;
+}
+
+ul#NodeMenu div.child {
+    /* 子メニュー */
+    background-color: white;
+}
+
+ul#NodeMenu div.indent {
+    margin-left: 1em;
+}

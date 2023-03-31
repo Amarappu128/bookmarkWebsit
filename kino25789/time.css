@@ -1,0 +1,350 @@
+/* フォントインポート */
+
+#clock111 {
+    height: 0px;
+    /* 高さは固定 */
+    margin: 0px auto;
+    max-width: 0px;
+    position: absolute;
+    top: calc(20% - 0px);
+    left: 50%;
+    transform: scale(1, 1);
+    transform-origin: top left;
+}
+
+
+/* ji */
+
+#harisan>div {
+    position: absolute;
+    z-index: 1050;
+}
+
+#hour-hand111 {
+    animation: rotation-h 86400s linear infinite;
+    /* 86400秒、12時間かけて一周 */
+    background-color: #cc3b3b;
+    border-radius: 5px;
+    height: 10px;
+    /* 線幅 */
+    position: absolute;
+    right: calc(0% - 3px);
+    /* 位置調整 線幅の半分ずらす */
+    top: calc(100% - 3px);
+    z-index: 1200 !important;
+    /* 位置調整 線幅の半分ずらす */
+    transform-origin: calc(100% - 3px) center;
+    /* アニメーションの中心軸 線幅の半分ずらす */
+    width: 60px;
+}
+
+
+/* hunn */
+
+#minute-hand111 {
+    animation: rotation-m 3600s linear infinite;
+    /* 3600秒、1時間かけて一周 */
+    background-color: #3F51B5;
+    border-radius: 5px;
+    height: 10px;
+    /* 線幅 */
+    position: absolute;
+    right: calc(0% - 3px);
+    /* 位置調整 線幅の半分ずらす */
+    top: calc(100% - 3px);
+    /* 位置調整 線幅の半分ずらす */
+    transform-origin: calc(100% - 3px) center;
+    /* アニメーションの中心軸 線幅の半分ずらす */
+    width: 90px;
+}
+
+#second-hand111 {
+    animation: rotation-s 60s linear infinite;
+    /* 60秒かけて一周 */
+    background-color: #000;
+    border-radius: 2px;
+    height: 4px;
+    /* 線幅 */
+    position: absolute;
+    right: calc(0%);
+    /* 位置調整 線幅の半分ずらす */
+    top: calc(100%);
+    /* 位置調整 線幅の半分ずらす */
+    transform-origin: calc(100%) center;
+    /* アニメーションの中心軸 線幅の半分ずらす */
+    width: 100px;
+}
+
+#second-minutes111 {
+    animation: rotation-ms 1s linear infinite;
+    background-color: #4CAF50;
+    border-radius: 2px;
+    height: 4px;
+    position: absolute;
+    right: calc(0%);
+    top: calc(100%);
+    transform-origin: calc(100%) center;
+    width: 50px;
+}
+
+
+/* 
+@keyframes rotation-ms {
+    0% {
+        transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(450deg)
+    }
+}
+
+@keyframes rotation-s {
+    0% {
+        transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(450deg)
+    }
+}
+
+@keyframes rotation-m {
+    0% {
+        transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(450deg)
+    }
+}
+
+@keyframes rotation-h {
+    0% {
+        transform: rotate(150deg)
+    }
+    100% {
+        transform: rotate(510deg)
+    }
+} */
+
+:root {
+    --t-font-size: 15px;
+    --t-r: 100px;
+    --t-x: calc( var(--t-r) / 2);
+    --t-cos-60: calc(var(--t-r) / 2);
+    --t-sin-60: calc(var(--t-r)*0.86602540378);
+}
+
+#clock_time {
+    position: absolute;
+    left: 530px;
+    top: 170px;
+    z-index: 100;
+    font-family: "D7MMR";
+}
+
+#boder111 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 3px black;
+    position: absolute;
+    right: calc(0% - 200px/2);
+    top: calc(100% - 200px/2);
+}
+
+#clock-1,
+#clock-2,
+#clock-3,
+#clock-4,
+#clock-5,
+#clock-6,
+#clock-7,
+#clock-8,
+#clock-9,
+#clock-10,
+#clock-11,
+#clock-12 {
+    font-size: var(--t-font-size);
+}
+
+#clock-1::after,
+#clock-2::after,
+#clock-3::after,
+#clock-4::after,
+#clock-5::after,
+#clock-6::after,
+#clock-7::after,
+#clock-8::after,
+#clock-9::after,
+#clock-10::after,
+#clock-11::after,
+#clock-12::after {
+    content: '';
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    height: 4px;
+    width: 15px;
+    transform-origin: 100% center;
+    position: absolute;
+}
+
+#clock-1 {
+    position: absolute;
+    right: calc(var(--t-cos-60) + 5px);
+    top: calc( var(--t-r) - var(--t-sin-60) + 12.5px);
+}
+
+#clock-2 {
+    position: absolute;
+    right: calc(var(--t-r) - var(--t-sin-60) + 14px);
+    top: calc( var(--t-r) - var(--t-cos-60) - -5px);
+}
+
+#clock-3 {
+    position: absolute;
+    right: calc(var(--t-r) - var(--t-r) + 18px);
+    top: calc(var(--t-r) - 15px/2 - 3px);
+}
+
+#clock-4 {
+    position: absolute;
+    right: calc(50% - 100px*0.866 + 13px);
+    top: calc(50% + 15px/2 + 100px/2 - 30px);
+}
+
+#clock-5 {
+    position: absolute;
+    right: calc(50% - 100px/2 + 5px);
+    top: calc(50% + 15px/2 + 100px*0.866 - 40px);
+}
+
+#clock-6 {
+    position: absolute;
+    right: calc(50% - 15px/2);
+    top: calc(100% - 36px);
+}
+
+#clock-7 {
+    position: absolute;
+    right: calc(100% - 100px/2 - 21px);
+    top: calc(50% + 15px/2 + 100px*0.866 - 36px);
+}
+
+#clock-8 {
+    position: absolute;
+    right: calc(50% + 100px*0.866 - 26px);
+    top: calc(50% + 15px/2 + 100px/2 - 30px);
+}
+
+#clock-9 {
+    position: absolute;
+    left: calc(0% + 15px + 3px);
+    top: calc(50% - 15px/2 + 0px);
+}
+
+#clock-10 {
+    position: absolute;
+    right: calc(50% + 100px*0.866 - 34px);
+    top: calc(50% - 15px/2 - 100px/2 + 11px);
+}
+
+#clock-11 {
+    position: absolute;
+    right: calc(100% - 100px/2 - 23px);
+    top: calc(50% - 15px/2 - 100px*0.866 + 20px);
+}
+
+#clock-12 {
+    position: absolute;
+    right: calc(50% - 15px);
+    top: calc(0% + 17px);
+}
+
+#console-time {
+    /* デバッグの針 */
+    background-color: rgb(227, 12, 235);
+    border-radius: 2px;
+    height: 4px;
+    /* 線幅 */
+    position: absolute;
+    right: calc(0%);
+    /* 位置調整 線幅の半分ずらす */
+    top: calc(100%);
+    /* 位置調整 線幅の半分ずらす */
+    transform-origin: calc(100%) center;
+    /* 				角度↓ */
+    transform: rotate(300deg);
+    width: 100px;
+    display: none;
+}
+
+#clock-1::after {
+    transform: rotate(300deg);
+    top: -14px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 21px);
+}
+
+#clock-2::after {
+    transform: rotate(150deg);
+    top: 1px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 15px);
+}
+
+#clock-3::after {
+    transform: rotate(180deg);
+    top: calc(15px/2);
+    right: calc(-3px);
+}
+
+#clock-4::after {
+    transform: rotate(210deg);
+    top: 11px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 16px);
+}
+
+#clock-5::after {
+    transform: rotate(240deg);
+    top: 17px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 14px);
+}
+
+#clock-6::after {
+    transform: rotate(270deg);
+    top: 20px;
+    right: calc(50% + -1px);
+}
+
+#clock-7::after {
+    transform: rotate(300deg);
+    top: 15px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 1px);
+}
+
+#clock-8::after {
+    transform: rotate(330deg);
+    top: 13px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 0px);
+}
+
+#clock-9::after {
+    transform: rotate(0deg);
+    top: calc(15px/2 - 3px);
+    right: calc(15px);
+}
+
+#clock-10::after {
+    transform: rotate(30deg);
+    top: -2px;
+    right: calc( var(--t-r) - var(--t-sin-60) + 8px);
+}
+
+#clock-11::after {
+    transform: rotate(60deg);
+    top: -4px;
+    right: calc( var(--t-r) - var(--t-sin-60) - 0px);
+}
+
+#clock-12::after {
+    transform: rotate(270deg);
+    top: -20px;
+    right: calc(50% + 1.5px);
+}

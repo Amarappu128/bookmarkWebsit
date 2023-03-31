@@ -1,0 +1,121 @@
+/* ここからブックマーク */
+
+.bookmark {
+    background-color: green;
+    /* border-left: 5px; */
+    border: 22px solid gray;
+    border-style: ridge;
+}
+
+.ossm {
+    background-color: #ffa500;
+    border: 25px solid gray;
+    border-style: ridge;
+    /* font-size: 10px; */
+}
+
+.wakan {
+    background-color: #20b2aa;
+    border: 25px solid gray;
+    border-style: ridge;
+    /* font-size:10px */
+}
+
+.benri .can {
+    /*    background-color:white;
+    width:785px;
+    height:300px;*/
+    border: 25px solid gray;
+    border-style: ridge;
+    /*    background-color:green;
+    width: 800px;
+    height: 1650px;
+    border: 25px solid gray;
+    border-style: ridge;*/
+}
+
+
+/*.benri h3{color:white;
+   
+}*/
+
+#keisan {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9z8BB9QYjlQ1btJUXP6R7jnp7DtWUhtYDiZ6YyI_Ps3SqPGa0);
+    /* // background-color: red; */
+    background-size: 100% 100%;
+    width: 785px;
+    height: 300px;
+    color: white;
+    border: 25px solid gray;
+    border-style: ridge;
+}
+
+.txtc a {
+    color: white !important;
+}
+
+.benri a {
+    color: #000000;
+}
+
+
+/* 
+.can a {
+     font-size:10px; 
+} 
+*/
+
+.games {
+    background-image: url(http://bvets.net/images/ss7.jpg);
+    background-size: 100% 100%;
+    width: 800px;
+    height: 300px;
+    border: 25px solid gray;
+    border-style: ridge;
+}
+
+.train {
+    background-image: url(http://blog-imgs-84.fc2.com/s/u/n/sunshine233t31/DSC_1318_20151017214754816.jpg);
+    background-size: 100% 100%;
+    width: 800px;
+    height: 300px;
+    border: 25px solid gray;
+    border-style: ridge;
+}
+
+.pc,
+#pc {
+    background-image: url(https://i.gzn.jp/img/2015/06/26/windows-10-desktop-image/00.jpg);
+    background-size: 100% 100%;
+    width: 800px;
+    height: 300px;
+    border: 25px solid gray;
+    border-style: ridge;
+}
+
+.dl {
+    background-color: #33ccff;
+    width: 800px;
+    height: 300px;
+    border: 25px solid gray;
+    border-style: ridge;
+}
+
+.dl a {
+    color: #ff9000;
+}
+
+.apk {
+    background-color: #adff2f;
+    width: 800px;
+    height: 300px;
+    border: 25px solid gray;
+    border-style: ridge;
+}
+
+.kino {
+    /* background: url(img/bookmark_icon.png); */
+    background-size: 100% 100%;
+    width: 300px;
+    height: 300px;
+}
