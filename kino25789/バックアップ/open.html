@@ -1,0 +1,168 @@
+
+<style type="text/css">
+    ul#NodeMenu {
+        margin:0; padding:0;
+        width:250px;
+        list-style:none;
+    }
+    ul#NodeMenu li {
+        margin:5px 0; padding:0;
+        list-style:none;
+    }
+    ul#NodeMenu a {
+        text-decoration:none;
+        color:navy;
+        display:block;
+        padding:2px 0;
+    }
+    ul#NodeMenu a:hover {
+        color:orange;
+    }
+    ul#NodeMenu span.parent { /* 親テキスト */
+        color:navy; font-weight:bold;
+        background-color:#eeeeee;
+    }
+
+    ul#NodeMenu div.child { /* 子メニュー */
+        background-color:#ffffcc;
+    }
+    ul#NodeMenu div.indent {
+        margin-left:1em;
+    }
+</style>
+
+<script type="text/javascript">
+    /* ブラウザ判別 */
+    var ie=document.all ? 1 : 0;
+    var ns6=document.getElementById&&!document.all ? 1 : 0;
+    var opera=window.opera ? 1 : 0;
+
+    /* 子メニューの表示・非表示切替 */
+    function openFolder(childObj, parentObj){
+        var child="";
+        var parent="";
+        var sw="/content/img/js/show.gif"; /* フォルダ表示時のアイコン画像 */
+        var hd="/content/img/js/hide.gif"; /* フォルダ非表示時のアイコン画像 */
+        if(ie || ns6 || opera){
+            child=ns6 ? document.getElementById(childObj).style : document.all(childObj).style;
+            parent=ns6 ? document.getElementById(parentObj) : document.all(parentObj);
+            if (child.display=="none"){
+                child.display="block";
+                parent.src=sw;
+            }else{
+                child.display="none";
+                parent.src=hd;
+            }
+        }
+    }
+</script>
+
+<ul id="NodeMenu">
+    <!-- 2階層[A] Begin -->
+    <li>
+        <img id="close_1" src="/content/img/js/hide.gif" onclick="openFolder('open_1', 'close_1')" alt="" />
+        <span class="parent" onclick="openFolder('open_1', 'close_1')">ctgA（2階層）</span>
+    </li>
+    <li>
+        <div class="indent">
+            <div id="open_1" class="child" style="display:none;">
+                <!-- [A-1] Begin -->
+                <ul>
+                    <li><a href="#">・ctgA-1</a></li>
+                    <li>
+                        <img id="close_1_1" src="/content/img/js/hide.gif" onclick="openFolder('open_1_1', 'close_1_1')" alt="" />
+                        <span class="parent" onclick="openFolder('open_1_1', 'close_1_1')">ctgA-2</span>
+                    </li>
+                    <li>
+                        <div class="indent">
+                            <div id="open_1_1" class="child" style="display:none;">
+                                <ul>
+                                    <li><a href="#">・ctgA-2-1</a></li>
+                                    <li><a href="#">・ctgA-2-2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- node[A-1] End // -->
+            </div>
+        </div>
+    </li>
+    <!-- 2階層[A] End // -->
+
+    <!-- 3階層[B] Begin -->
+    <li>
+        <img id="close_2" src="/content/img/js/hide.gif" onclick="openFolder('open_2', 'close_2')" alt="" />
+        <span class="parent" onclick="openFolder('open_2', 'close_2')">ctgB（3階層）</span>
+    </li>
+    <li>
+        <div class="indent">
+            <div id="open_2" class="child" style="display:none;">
+                <!-- [B] Begin -->
+                <ul>
+                    <li>
+                        <a href="#">・ctgB-1</a>
+                        <!-- [B-2] Begin -->
+                        <ul>
+                            <li>
+                                <img id="close_2a" src="/content/img/js/hide.gif" onclick="openFolder('open_2a', 'close_2a')" alt="" />
+                                <span class="parent" onclick="openFolder('open_2a', 'close_2a')"><h3>ctgB-2</h3></span>
+                            </li>
+                            <li>
+                                <div class="indent">
+                                    <div id="open_2a" class="child" style="display:none;">
+                                        <!-- [B-2-1] Begin -->
+                                        <ul>
+                                            <li><a href="#">・ctgB-2-1</a></li>
+                                            <li>
+                                                <img id="close_2aa" src="/content/img/js/hide.gif" onclick="openFolder('open_2aa', 'close_2aa')" alt="" />
+                                                <span class="parent" onclick="openFolder('open_2aa', 'close_2aa')"><h3>ctgB-2-2</h3></span>
+                                            </li>
+                                            <li>
+                                                <div class="indent">
+                                                    <div id="open_2aa" class="child" style="display:none;">
+                                                        <ul>
+                                                            <li><a href="#">・ctgB-2-2-1</a></li>
+                                                            <li><a href="#">・ctgB-2-2-2</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">・ctgB-2-3</a></li>
+                                        </ul>
+                                        <!-- [B-2-1] End // -->
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <li><a href="#">・ctgB-2.2</a></li>
+                        
+                                        <!-- [B-2-1] Begin -->
+                                        <ul>
+                                            <li><a href="#">・ctgB-2-1</a></li>
+                                            <li>
+                                                <img id="close_2aaa" src="/content/img/js/hide.gif" onclick="openFolder('open_2aaa', 'close_2aaa')" alt="" />
+                                                <span class="parent" onclick="openFolder('open_2aaa', 'close_2aaa')"><h3>ctgB-2-2</h3></span>
+                                            </li>
+                                            <li>
+                                                <div class="indent">
+                                                    <div id="open_2aaa" class="child" style="display:none;">
+                                                        <ul>
+                                                            <li><a href="#">・ctgB-2-2-1</a></li>
+                                                            <li><a href="#">・ctgB-2-2-2</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a href="#"></a></li>
+                                        </ul>
+                                        <!-- [B-2-1] End // -->
+                        <!-- [B-2] End // -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <!-- 3階層[Bs] End // -->
+</ul>
+
