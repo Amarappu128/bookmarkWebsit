@@ -94,12 +94,23 @@ body {
 
 @keyframes kino_tab {
     from {
-        transform: translateX(50px);
+        transform: translateX(0px);
         opacity: 0;
     }
     to {
-        transform: translateX(0px);
+        transform: translateX(-300px);
         opacity: 1;
+    }
+}
+
+@keyframes kino_tab_end {
+    from {
+        transform: translateX(-300px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 0;
     }
 }
 
@@ -107,11 +118,6 @@ body {
     animation: kino_tab 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s 1 normal both;
 }
 
-#book_kino25789 {
-    animation: kino_tab 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s 1 reverse both;
+#book_kino25789.close_menue {
+    animation: kino_tab_end 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s 1 normal both;
 }
-
-
-/* #book_kino25789.open {
-    animation: google_tab_end 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s 1 normal both;
-} */

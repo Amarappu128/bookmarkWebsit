@@ -30,21 +30,28 @@ function nullclock111() {
 // }
 
 
-$("#google_tab_button").click(function() {
-    $('#google_tab').toggleClass("open_google");
-});
+$("#google_tab_button").click(
+    function() {
+        $('#google_tab').toggleClass("open_google");
+    }
+);
 
 
 
-$("#menue_home").click(function() {
-    $(this).toggleClass("open_menue");
-    $("#book_kino25789").toggleClass("open_menue");
-});
+$("#menue_home").click(
+    function() {
+        $(this).toggleClass("open_menue");
+        if ($("#book_kino25789").hasClass("open_menue")) {
+            $("#book_kino25789").removeClass("open_menue");
+            $("#book_kino25789").addClass("close_menue");
+        } else {
+            $("#book_kino25789").addClass("open_menue");
+            $("#book_kino25789").removeClass("close_menue");
+        }
+    }
+);
 
 //time
-
-
-
 
 {
 
